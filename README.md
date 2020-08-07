@@ -1,12 +1,3 @@
-# SIT 311 GROUP PROJECT
-### Members: 
----
-| Name     | Job          | 
-| ------------- |:-------------:|
-| Tim Tattersal      | Dashboard (Front End) | 
-| Marshal Welgama    | Backend API      | 
-| Mehul Warde | Maps     | 
-| Greg Macintyre | AWS IoT Core    | 
 
 ## Front End:
 ---
