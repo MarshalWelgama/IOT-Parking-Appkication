@@ -1,0 +1,43 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>
+			<span *ngIf="currentWeather">Current Weather in {{searchParams.locality}}</span>
+			<span *ngIf="!currentWeather">No weather available</span>
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content *ngIf="currentWeather != null">
+		<div fxLayout="row">
+			<div fxFlex="50%">
+				<div class="current-weather">
+					<div>
+						<mat-icon>wb_sunny</mat-icon> <span class="temperature">{{currentWeather.temperature}}ºC</span>
+					</div>
+					<div class="last-checked">Last Checked: {{currentWeather.time | date: 'h:mmaa, LLL d'}}</div>
+				</div>
+			</div>
+			<div fxFlex="50%">
+				<div>Min: {{currentWeather.temperatureLow}}ºC</div>
+				<div>Max: {{currentWeather.temperatureHigh}}ºC</div>
+				<div>Feels Like: {{currentWeather.apparentTemperature}}ºC</div>
+			</div>
+		</div>
+		<div class="mat-table">
+			<div class="mat-row">
+				<div class="mat-cell">Wind</div>
+				<div class="mat-cell">{{currentWeather.windBearing}} {{currentWeather.windSpeed}} m/s</div>
+			</div>
+			<div class="mat-row">
+				<div class="mat-cell">Humidity</div>
+				<div class="mat-cell">{{currentWeather.humidity * 100}}%</div>
+			</div>
+			<div class="mat-row">
+				<div class="mat-cell">UV Index</div>
+				<div class="mat-cell">{{currentWeather.uvIndex}}</div>
+			</div>
+		</div>
+	</mat-card-content>
+	<div class="spinner-overlay" *ngIf="loadingWeather">
+		<mat-spinner diameter="24"></mat-spinner>
+	</div>
+</mat-card>
+

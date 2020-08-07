@@ -1,0 +1,7 @@
+<mat-toolbar color="primary">
+	<span>Gutter Rash</span>
+	<span class="push-to-right"></span>
+	<span>
+		<button *ngFor="let menuItem of menuItems" mat-button [routerLink]="'/' + menuItem.endpoint" [disabled]="onEndpoint(menuItem.endpoint)">{{menuItem.name}}</button>
+	</span>
+</mat-toolbar>

@@ -1,0 +1,472 @@
+[
+    {
+        "bay_id": "1005",
+        "location": {
+            "lattitude": "-37.813104376935705",
+            "longitude": "144.9625311043034"
+        },
+        "status": "Present",
+        "restrictions": [
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "120",
+                    "disablity": "240"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "18:30:00",
+                    "end": "20:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "60",
+                    "disablity": "120"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    },
+    {
+        "bay_id": "1006",
+        "location": {
+            "lattitude": "-37.81305337978721",
+            "longitude": "144.96250770939437"
+        },
+        "status": "Present",
+        "restrictions": [
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "120",
+                    "disablity": "240"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "18:30:00",
+                    "end": "20:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "60",
+                    "disablity": "120"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    },
+    {
+        "bay_id": "1007",
+        "location": {
+            "lattitude": "-37.812853691907605",
+            "longitude": "144.96262375530551"
+        },
+        "status": "Present",
+        "restrictions": [
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "120",
+                    "disablity": "0"
+                },
+                "effectiveonph": "1",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "20:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    0
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "240",
+                    "disablity": "0"
+                },
+                "effectiveonph": "1",
+                "time": {
+                    "start": "20:30:00",
+                    "end": "23:59:59"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    },
+    {
+        "bay_id": "1019",
+        "location": {
+            "lattitude": "-37.81537450838522",
+            "longitude": "144.9609981458234"
+        },
+        "status": "Unoccupied",
+        "restrictions": [
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "16:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "daysTranslated": "Monday to Friday"
+            },
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "18:30:00",
+                    "end": "19:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "daysTranslated": "Monday to Friday"
+            },
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "19:30:00"
+                },
+                "days": [
+                    6
+                ],
+                "daysTranslated": "Only on Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "60",
+                    "disablity": "120"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    },
+    {
+        "bay_id": "1022",
+        "location": {
+            "lattitude": "-37.81382636470905",
+            "longitude": "144.9600326035407"
+        },
+        "status": "Unoccupied",
+        "restrictions": [
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "120",
+                    "disablity": "240"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "18:30:00",
+                    "end": "20:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "60",
+                    "disablity": "120"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    },
+    {
+        "bay_id": "1023",
+        "location": {
+            "lattitude": "-37.81377750455344",
+            "longitude": "144.96001017219652"
+        },
+        "status": "Present",
+        "restrictions": [
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "120",
+                    "disablity": "240"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "18:30:00",
+                    "end": "20:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "60",
+                    "disablity": "120"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    },
+    {
+        "bay_id": "1024",
+        "location": {
+            "lattitude": "-37.813567450483426",
+            "longitude": "144.95991378250756"
+        },
+        "status": "Unoccupied",
+        "restrictions": [
+            {
+                "isFree": true,
+                "duration": {
+                    "normal": "30",
+                    "disablity": "60"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "120",
+                    "disablity": "240"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "18:30:00",
+                    "end": "20:30:00"
+                },
+                "days": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "daysTranslated": "Monday to Sunday"
+            },
+            {
+                "isFree": false,
+                "duration": {
+                    "normal": "60",
+                    "disablity": "120"
+                },
+                "effectiveonph": "0",
+                "time": {
+                    "start": "07:30:00",
+                    "end": "18:30:00"
+                },
+                "days": [
+                    0
+                ],
+                "daysTranslated": "Only on Sunday"
+            }
+        ]
+    }
+]

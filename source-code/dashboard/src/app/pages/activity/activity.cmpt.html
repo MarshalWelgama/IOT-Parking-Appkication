@@ -1,0 +1,28 @@
+<div class="activity">
+	<mat-card>
+		<mat-card-header>
+			<mat-card-title>IoT Activity</mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<mat-table [dataSource]="activity">
+				<ng-container matColumnDef="bayID">
+					<mat-header-cell *matHeaderCellDef>Bay ID</mat-header-cell>
+					<mat-cell *matCellDef="let row"> {{row.bayID}} </mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="status">
+					<mat-header-cell *matHeaderCellDef>Status</mat-header-cell>
+					<mat-cell *matCellDef="let row">{{row.status ? row.status : ''}}</mat-cell>
+				</ng-container>
+
+				<ng-container matColumnDef="restriction_duration">
+					<mat-header-cell *matHeaderCellDef> Restriction </mat-header-cell>
+					<mat-cell *matCellDef="let row"> {{row.restriction_duration ? row.restriction_duration : ''}} </mat-cell>
+				</ng-container>
+
+				<mat-header-row *matHeaderRowDef="activityColumns"></mat-header-row>
+				<mat-row *matRowDef="let row; columns: activityColumns;"></mat-row>
+			</mat-table>
+		</mat-card-content>
+	</mat-card>
+</div>

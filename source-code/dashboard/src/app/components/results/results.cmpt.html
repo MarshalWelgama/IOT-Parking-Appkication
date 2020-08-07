@@ -1,0 +1,48 @@
+<mat-card>
+	<mat-card-header>
+		<mat-card-title>Find a Park</mat-card-title>
+		<button mat-stroked-button class="button-small" color="accent" matTooltip="Refresh Parks" (click)="loadParks()">
+			<mat-icon fontSet="fas" fontIcon="fa-sync-alt" inline="true"></mat-icon>Refresh
+		</button>
+		<mat-button-toggle-group class="view-selector" #resultsView="matButtonToggleGroup">
+			<mat-button-toggle checked="true" value="map" aria-label="Map View">
+				<mat-icon fontSet="fas" inline="true" fontIcon="fa-map-marked-alt"></mat-icon> Map View
+			</mat-button-toggle>
+			<mat-button-toggle value="list" aria-label="List View">
+				<mat-icon fontSet="fas" inline="true" fontIcon="fa-list"></mat-icon> List View
+			</mat-button-toggle>
+		</mat-button-toggle-group>
+	</mat-card-header>
+	<mat-card-content>
+		<div #mapView class="google-map" [style.display]="resultsView.value == 'map' ? 'block' : 'none'"></div>
+		<div *ngIf="resultsView.value == 'list'">
+			<table class="mat-table">
+				<thead>
+					<tr>
+						<th>Bay ID</th>
+						<th>Distance</th>
+						<th>Status</th>
+						<th>Restrictions</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let park of markers.parks">
+						<td>{{park.bayId}}</td>
+						<td>x km</td>
+						<td>{{park.status}}</td>
+						<td [innerHTML]="park.restrictionsToText()"></td>
+						<td>
+							<button mat-raised-button color="primary" (click)="doNothing()">
+								<mat-icon fontSet="fas" fontIcon="fa-info-circle" inline="true"></mat-icon> More Info
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="spinner-overlay" *ngIf="loadingParks">
+			<mat-spinner diameter="24"></mat-spinner>
+		</div>
+	</mat-card-content>
+</mat-card>

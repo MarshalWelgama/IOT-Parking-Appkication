@@ -1,0 +1,109 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+
+@include mat-core();
+
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+$dashboard-primary: mat-palette($mat-indigo);
+$dashboard-accent: mat-palette($mat-blue-grey, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+$dashboard-warn: mat-palette($mat-red);
+
+// // Create the theme object (a Sass map containing all of the palettes).
+// $dashboard-light-theme: mat-light-theme($dashboard-primary, $dashboard-accent, $dashboard-warn);
+$dashboard-theme: mat-dark-theme($dashboard-primary, $dashboard-accent, $dashboard-warn);
+
+@include angular-material-theme($dashboard-theme);
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.full-width-field {
+   width: 100%;
+}
+
+.mat-button-block {
+	width:100%;
+	
+	& + .mat-button-block {
+		margin-top:10px;
+	}
+}
+
+.spinner-overlay {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:rgba(0,0,0,0.6);
+
+	mat-spinner {
+		text-align:center;
+		top:calc(50% - 12px);
+		left:calc(50% - 12px);
+		position:relative;
+	}
+}
+
+
+mat-icon[inline="true"] {
+	&:first-child {
+		margin-right:5px;
+	}
+
+	&:last-child {
+		margin-left:5px;
+	}
+}
+
+table.mat-table {
+	width:100%;
+	border-collapse:collapse;
+	margin-top:10px;
+
+	td, th {
+		padding:10px;
+		text-align:left;
+		border:1px solid rgba(0,0,0,0.15);
+	}
+
+	tr:nth-child(even) {
+		background-color:rgba(0,0,0,0.15);
+	}
+}
+
+.banner {
+	display:block;
+	padding:8px 12px;
+	line-height:24px;
+	color:#ffffff;
+	margin:10px 0;
+	border-radius:4px;
+	box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+	&.warn {
+		background-color: mat-color($mat-red);
+	}
+
+	&.accent {
+		background-color: mat-color($dashboard-accent, default);
+		color: mat-color($dashboard-accent, default-contrast);
+
+	}
+
+	&.primary {
+		background-color: mat-color($mat-pink);
+	}
+}

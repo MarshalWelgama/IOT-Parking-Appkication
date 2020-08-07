@@ -1,0 +1,71 @@
+<div fxLayout="row" fxLayoutGap="20px">
+	<div fxFlex="1 1 auto">
+		<mat-form-field class="full-width-field" color="accent">
+			<input matInput #fieldQuery placeholder="Search for a street, city or place" type="text" (keyup)="updateSuggestions($event.target)" [matAutocomplete]="addressAuto">
+		</mat-form-field>
+		<mat-autocomplete #addressAuto="matAutocomplete" (optionSelected)="selectPrediction($event)" [displayWith]="displayPrediction">
+			<mat-option *ngFor="let prediction of placeSuggestions" [value]="prediction">
+				{{prediction.description}}
+			</mat-option>
+		</mat-autocomplete>
+	</div>
+	<div fxFlex="0 0 auto" style="vertical-align:bottom">
+		<button mat-icon-button [color]="usingUserLocation ? 'primary' : 'accent'" matTooltip="Use Current Location" (click)="useUserLocation()">
+			<mat-icon fontSet="fa" fontIcon="fa-location-arrow"></mat-icon>
+		</button>
+	</div>
+</div>
+
+<div fxLayout="row" fxLayout.lt-lg="column true" fxLayoutGap="10px">
+	<button fxFlex.gt-md="33.33%" mat-stroked-button color="accent" (click)="showAdvancedSearch = !showAdvancedSearch">
+		Advanced Search
+		<mat-icon inline="true" fontSet="fas" fontIcon="fa-angle-down" *ngIf="!showAdvancedSearch"></mat-icon>
+		<mat-icon inline="true" fontSet="fas" fontIcon="fa-angle-up" *ngIf="showAdvancedSearch"></mat-icon>
+	</button>
+	<button fxFlex.gt-md="33.33%" mat-stroked-button color="warn" (click)="clearSearch()">
+		<mat-icon inline="true" fontSet="fas" fontIcon="fa-eraser"></mat-icon> Clear Search
+	</button>
+	<button fxFlex.gt-md="33.33%" *ngIf="!showAdvancedSearch" mat-raised-button color="primary" (click)="updateQuery()">
+		<mat-icon inline="true" fontSet="fas" fontIcon="fa-search"></mat-icon> Find Park
+	</button>
+</div>
+
+<div class="advanced-search-box" [@toggleState] *ngIf="showAdvancedSearch" fxLayout="column" fxLayoutGap="10px">
+	<div>
+		<label>Search Radius: {{searchRadius.value}} km</label>
+		<mat-slider class="full-width-field" #searchRadius="matSlider" min="1" max="100" step="1" value="10" tickInterval="10"></mat-slider>
+		<mat-form-field class="full-width-field" color="accent">
+			<mat-label>Park Status</mat-label>
+			<mat-select matNativeControl required>
+				<mat-option value="">Any Statuses</mat-option>
+				<mat-option value="unoccupied">Unoccupied</mat-option>
+			</mat-select>
+		</mat-form-field>
+	</div>
+	<div>
+		<mat-label>Options:</mat-label>
+		<div fxLayout="row true" fxLayoutGap="10px">
+			<div>
+				<mat-checkbox [checked]="true">On Street Parks</mat-checkbox>
+			</div>
+			<div>
+				<mat-checkbox [checked]="true">Individual Parks</mat-checkbox>
+			</div>
+			<div>
+				<mat-checkbox [checked]="true">Disabled Parks</mat-checkbox>
+			</div>
+			<div>
+				<mat-checkbox [checked]="true">Metered Parks</mat-checkbox>
+			</div>
+		</div>
+	</div>
+	<div>
+		<button mat-raised-button class="mat-button-block" color="primary" (click)="updateQuery()">
+			<mat-icon inline="true" fontSet="fas" fontIcon="fa-search"></mat-icon> Find Park
+		</button>
+	</div>
+</div>
+
+<div class="spinner-overlay" *ngIf="gettingUserLocation">
+	<mat-spinner diameter="24"></mat-spinner>
+</div>

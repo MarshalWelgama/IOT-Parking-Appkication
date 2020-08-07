@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple Markers</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+        <input type="text" id="address" placeholder="Street number and name" />
+        <button id="btn" class="btn btn-black" style="width: 150px;">Locate me</button>
+        
+        <script src="google.js"></script>
+    <div id="map"></div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpYBWln46RzudSt1O7cfXj0youi5YOzwM&callback=initMap">
+    </script>
+  </body>
+</html>

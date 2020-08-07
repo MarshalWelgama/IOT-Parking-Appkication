@@ -1,0 +1,48 @@
+:host {
+	position:relative;
+	
+	.mat-table {
+		display: block;
+		font-family: Tahoma, Verdana;
+	}
+
+	.mat-row,
+	.mat-header-row {
+		display: flex;
+		border-bottom-width: 1px;
+		border-bottom-style: solid;
+		align-items: center;
+		min-height: 48px;
+		padding: 0 24px;
+	}
+
+	.mat-cell,
+	.mat-header-cell {
+		flex: 1;
+		overflow: hidden;
+		word-wrap: break-word;
+	}
+
+	.current-weather {
+		padding-left:20px;
+
+		mat-icon {
+			font-size:40px;
+			line-height:60px;
+			vertical-align:top;
+			margin-right:10px;
+			display:inline-block;
+			height:40px;
+			width:40px;
+		}
+		.temperature {
+			font-size:40px;
+			line-height:60px;
+			vertical-align:middle;
+			padding-right:10px;
+		}
+		.last-checked {
+			margin-top:6px;
+		}
+	}
+}

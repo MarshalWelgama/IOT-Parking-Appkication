@@ -1,0 +1,18 @@
+<div class="dashboard">
+	<div class="banner accent" *ngIf="!locationSelected">
+		<mat-icon inline="true" fontSet="fas" fontIcon="fa-info-circle"></mat-icon> Search for a location to get started
+	</div>
+	<div fxLayout="row" fxLayoutGap="20px">
+		<div fxFlex="33.33%">
+			<mat-card>
+				<mat-card-content>
+					<search></search>
+				</mat-card-content>
+			</mat-card><br>
+			<weather></weather>
+		</div>
+		<div fxFlex="66.66%">
+			<results></results>
+		</div>
+	</div>
+</div>
